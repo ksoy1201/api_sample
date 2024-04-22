@@ -5,28 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link rel="stylesheet" href="./my_reset.css" />
     <link rel="stylesheet" href="/styel.css" />
     <script src="./common.js" defer></script>
   </head>
   <body>
-    <div>
+    <div class="wrap">
       <header>
-        <h1>메인로고</h1>
+        <h1></h1>
         <nav>
+          <h2>
+            <a href="#"><img src="./img/logo.png" alt="메인 로고" /></a>
+          </h2>
           <ul>
-            <li>메뉴1</li>
-            <li>메뉴2</li>
-            <li>메뉴3</li>
-            <li>메뉴4</li>
+            <li><a href="">메뉴</a></li>
+            <li><a href="">메뉴2</a></li>
+            <li><a href="">메뉴3</a></li>
+            <li><a href="">메뉴4</a></li>
           </ul>
         </nav>
+        <label class="inputText"
+          ><input type="text" placeholder="Search ..." />
+          <i class="fa-solid fa-magnifying-glass searchBtn"></i>
+        </label>
       </header>
       <main>
+        <div>
+          <img src="./img/main.jpg" alt="" />
+        </div>
+        <div class="text1">
+          <span>BSET TRIP</span> <i class="fa-solid fa-chevron-left left"></i>
+          <i class="fa-solid fa-chevron-right right"></i>
+        </div>
         <ul class="listCon">
           <li>
-            <div>
-              <span>추천여행지</span>
+            <div class="sub">
+              <img src="./img/none.png" alt="" />
               <p>신선처럼 누리는 봄날의 정취, 임실 사선대국민관광지</p>
               <p>
                 구름 한 점 없이 맑은 하늘 아래 떠나는 상춘 여행에 임실을 빠뜨릴
@@ -56,7 +77,9 @@
               <span>임실군청 관광치즈과 063-640-2341</span>
               <a
                 href="https://www.mcst.go.kr/kor/s_culture/tour/tourView.jsp?pSeq=&pDetailSeq=991"
-              ></a>
+              >
+                자세히 보기
+              </a>
             </div>
           </li>
         </ul>

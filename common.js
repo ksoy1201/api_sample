@@ -21,12 +21,12 @@ const renderTrip = (dataList) => {
     .map(
       (item) => `<li>
          <div>
-           <span>${item.collectionDb}</span>
+         <img src="./img/none.png" alt="" />
            <p>${item.title}</p>
            <p>${item.description}</p>
            <span>${item.title}</span>
            <span>${item.spatialCoverage}</span>
-          <a href="${item.url}"></a>
+          <a href="${item.url}">자세히 보기</a>
          </div>
       </li>`
     )
