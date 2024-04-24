@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title></title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+    </style>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -25,10 +28,10 @@
             <a href="#"><img src="./img/logo.png" alt="메인 로고" /></a>
           </h2>
           <ul>
-            <li><a href="">메뉴</a></li>
-            <li><a href="">메뉴2</a></li>
-            <li><a href="">메뉴3</a></li>
-            <li><a href="">메뉴4</a></li>
+            <li><a href=""> 메뉴1</a></li>
+            <li><a href=""> 메뉴2</a></li>
+            <li><a href=""> 메뉴3</a></li>
+            <li><a href=""> 메뉴4</a></li>
           </ul>
         </nav>
         <label class="inputText"
@@ -41,15 +44,22 @@
           <img src="./img/main.jpg" alt="" />
         </div>
         <div class="text1">
-          <span>BSET TRIP</span> <i class="fa-solid fa-chevron-left left"></i>
-          <i class="fa-solid fa-chevron-right right"></i>
+          <span>BSET TRIP</span>
+          <!-- <i class="fa-solid fa-chevron-left left"></i> -->
+          <div class="pgcon">
+            <button class="on">1</button>
+            <button>2</button>
+          </div>
+          <!-- <i class="fa-solid fa-chevron-right right"></i> -->
         </div>
         <ul class="listCon">
           <li>
             <div class="sub">
               <img src="./img/none.png" alt="" />
-              <p>신선처럼 누리는 봄날의 정취, 임실 사선대국민관광지</p>
-              <p>
+              <p class="text_title">
+                신선처럼 누리는 봄날의 정취, 임실 사선대국민관광지
+              </p>
+              <p class="text_main">
                 구름 한 점 없이 맑은 하늘 아래 떠나는 상춘 여행에 임실을 빠뜨릴
                 수 없다. 산이 많고 물이 많은 임실은 그야말로 봄의 전령사다.
                 사방을 에워싸고 있는 산의 신록, 섬진강의 개나리와 옥정호의
@@ -76,6 +86,7 @@
               <span>전북 임실군 관촌면 사선2길 68-7</span>
               <span>임실군청 관광치즈과 063-640-2341</span>
               <a
+                class="more"
                 href="https://www.mcst.go.kr/kor/s_culture/tour/tourView.jsp?pSeq=&pDetailSeq=991"
               >
                 자세히 보기

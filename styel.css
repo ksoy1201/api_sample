@@ -1,6 +1,15 @@
 @charset 'utf-8';
+
+.noto-sans-kr-normal {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --mainColor: #7db249;
+  font-family: 'Noto Sans KR';
 }
 
 .wrap {
@@ -17,6 +26,7 @@ h1 {
   height: 56px;
 }
 
+/* 헤더 시작 */
 header img {
   width: 100px;
 }
@@ -42,6 +52,8 @@ nav ul li:hover a {
   color: var(--mainColor);
 }
 
+/* 상단 검색버튼 */
+
 .inputText {
   width: 100%;
   display: flex;
@@ -60,10 +72,12 @@ nav ul li:hover a {
   padding-left: 2rem;
 }
 .inputText i {
-  position: absolute;
-  left: 60%;
+  position: relative;
   cursor: pointer;
+  right: 40px;
 }
+
+/* 메인 영역시작  */
 
 main img {
   position: relative;
@@ -90,24 +104,21 @@ main .text1 {
   font-size: 20px;
   padding: 1.5rem;
 }
-.text1 i {
-  position: absolute;
+
+main .pgcon {
+  position: relative;
+  right: 10%;
+  border: none;
+  list-style: none;
 }
-.text1 i:hover {
-  color: var(--mainColor);
-}
-.text1 i.left {
-  left: 70%;
-}
-.text1 i.right {
-  right: 20%;
-}
+
+/* 메인 ul 부분 */
 
 main .listCon {
   padding: 2rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
 }
 
 main ul div {
@@ -115,10 +126,37 @@ main ul div {
 }
 
 main ul li {
+  position: relative;
   border: 1px solid black;
   border-radius: 30px;
+}
+main ul li > * {
+  line-height: 1.6;
+  padding: 0 1rem;
 }
 
 main ul img {
   height: 200px;
+}
+
+main ul .text_title {
+  font-size: 20px;
+  font-weight: bold;
+}
+main ul .text_point {
+  font-size: 15px;
+  color: #858585;
+}
+main ul .text_main {
+  white-space: wrap;
+  /* text-overflow: ellipsis; */
+}
+
+main ul .more {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  color: transparent;
 }
