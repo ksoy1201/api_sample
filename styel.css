@@ -14,10 +14,11 @@
 
 .wrap {
   overflow: hidden;
+  
 }
 .wrap > * {
   max-width: 1200px;
-  width: calc(100% - 2rem);
+  width: calc(100% - 1rem);
   margin: auto;
 }
 
@@ -94,22 +95,35 @@ main .text1 {
 }
 
 .text1 span {
-  position: relative;
+  /* position: relative; */
   width: 80%;
   height: 70px;
   border-radius: 30px;
   background-color: #f4f4f4;
-  /* color: var(--mainColor); */
-  text-align: start;
   font-size: 20px;
   padding: 1.5rem;
 }
 
-main .pgcon {
-  position: relative;
-  right: 10%;
+.pgcon {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  padding: 0 1rem;
+}
+.pgcon button {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   border: none;
-  list-style: none;
+  outline: none;
+  background-color: transparent;
+}
+.pgcon button:hover {
+  background-color: #999;
+}
+.pgcon button.on {
+  color: var(--mainColor);
+  font-weight: bold;
 }
 
 /* 메인 ul 부분 */
@@ -145,7 +159,7 @@ main ul .text_title {
 }
 main ul .text_point {
   font-size: 15px;
-  color: #858585;
+  color: var(--mainColor);
 }
 main ul .text_main {
   white-space: wrap;

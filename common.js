@@ -30,14 +30,14 @@ const inputText = document.querySelector('.inputText>input');
 
 // 나중에 검색 기능이나 페이지네이션 기능 추가 하기 위해서는 api 요청 parameter 정보를 변수로 빼서 사용하는 것이 좋아요
 const API_KEY = '6a14b3d4-21f2-4b07-b66c-1a1bd3197ba3';
-let numOfRows = 10;
+let numOfRows = 2;
 let pageNo = 1;
 let keyword = '';
 
 let totalCount = 0;
 let pageSize = 2;
 let page = 1;
-let groupSize = 10;
+let groupSize = 5;
 
 const pagination = () => {
   let pageGroup = Math.ceil(page / groupSize);
@@ -47,18 +47,18 @@ const pagination = () => {
   );
   let firstPage = (pageGroup - 1) * groupSize + 1;
 
-  let paginationhtml = `<button class="prev">이전</button>`;
+  let paginationhtml = `<button class="prev" onclick="moveToPage(${page - 1})">이전</button>`;
   for (let i = firstPage; i <= lastPage; i++) {
-    paginationhtml += `<button>${i}</button>`;
+    paginationhtml += `<button onclick="moveToPage(${i})">${i}</button>`;
   }
-  paginationhtml += `<button class="next">다음</button>`;
+  paginationhtml += `<button class="next" onclick="moveToPage(${page + 1})">다음</button>`;
   document.querySelector('.pgcon').innerHTML = paginationhtml;
 };
 
-const moveToPage = async (pageNum, category) => {
-  console.log('moveToPage', category);
+const moveToPage = async (pageNum) => {
+  console.log('moveToPage', pageNum);
   page = pageNum;
-  lodeData(numOfRows, pageNo, keyword, pageSize);
+  lodeData(numOfRows, pageNum, keyword, pageSize);
 };
 
 // 검색어를 입력하고 엔터를 누르면 검색어를 가져와서 api 요청을 보내는 함수
@@ -102,9 +102,10 @@ const lodeData = async (numOfRows, pageNo, keyword, pageSize) => {
 };
 
 const renderTrip = (dataList) => {
-  const startIndex = (page - 1) * pageSize;
-  const endIndex = startIndex + pageSize;
-  const paginatedData = dataList.slice(startIndex, endIndex);
+  if (dataList.length == 0) {
+    dataBord.innerHTML = `<div class="alert">입력된 검색 결과가 없습니다.</div>`;
+    return;
+  }
   const dataHtml = dataList.map((item) => createHtml(item)).join('');
   dataBord.innerHTML = dataHtml;
 };
